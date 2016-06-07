@@ -1,5 +1,10 @@
 /*eslint-disable*/
 
+// No need to build the DLL in production
+if (process.env.NODE_ENV === 'production') {
+  process.exit(0)
+}
+
 require('shelljs/global');
 
 rm('-rf', 'node_modules/react-boilerplate-dlls')

@@ -33,6 +33,8 @@ const dllPlugin = defaults(pkg.dllPlugin, {
     'chalk',
     'compression',
     'sanitize.css',
+    'cross-env',
+    'ip',
   ],
 
   /**
@@ -50,7 +52,6 @@ const dllPlugin = defaults(pkg.dllPlugin, {
    */
   path: 'node_modules/react-boilerplate-dlls',
 });
-
 
 if (dllPlugin.dlls && typeof dllPlugin.dlls !== 'object') {
   throw new Error('The Webpack DLL Plugin configuration in your package.json must contain a dlls property.');
