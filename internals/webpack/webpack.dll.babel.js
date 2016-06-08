@@ -24,10 +24,6 @@ const uniq = require('lodash/uniq');
 const defaults = require('lodash/defaultsDeep');
 const webpack = require('webpack');
 
-
-/**
- * @todo discuss best configuration UI
- */
 const dllPlugin = defaults(pkg.dllPlugin, {
   /**
    * Not all dependencies can be bundled
