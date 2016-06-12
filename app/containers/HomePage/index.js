@@ -10,12 +10,19 @@
  */
 
 import React from 'react';
+import myAwesomeComponent from '../../components/myAwesomeComponent';
 
-export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+export default class HomePage extends React.Component {
+  componentWillMount() {
+    console.log('MOUNTED');
+  }
 
   render() {
     return (
-      <h1>This is the Homepage!</h1>
+      <div>
+        <h1>This is the Homepage!</h1>
+        <myAwesomeComponent className="container" text="WHO GOES THERE?"></myAwesomeComponent>
+      </div>
     );
   }
 }
